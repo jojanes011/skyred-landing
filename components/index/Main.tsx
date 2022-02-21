@@ -10,7 +10,7 @@ const Main = () => {
     };
 
     return (
-        <div className='flex flex-col justify-between bg-main bg-cover bg-bottom text-white space-y-2 px-4 md:px-48 pt-16 py-32'>
+        <div className='flex flex-col justify-between bg-main bg-cover bg-bottom text-white space-y-8 px-4 md:px-48 pt-16 py-32'>
             <div className='flex flex-row items-center justify-between'>
                 <Image width={148} height={42} alt='logo' src='/img/logo.png' />
                 <div className='hidden md:flex flex-row space-x-8 justify-around font-bold'>
