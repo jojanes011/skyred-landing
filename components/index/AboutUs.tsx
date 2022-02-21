@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutUs = () => {
     return (
-        <div className='flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-16 py-8 px-4 md:px-16 space-y-4 md:space-y-0'>
+        <div className='flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-16 py-8 px-4 md:px-48 space-y-4 md:space-y-0'>
             <div className='w-full md:w-1/2'>
                 <video
                     autoPlay

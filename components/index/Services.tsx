@@ -3,7 +3,7 @@ import React from "react";
 
 const Services = () => {
     return (
-        <div className='flex flex-col md:flex-row items-center justify-between space-x-0 md:space-x-8 px-4 md:px-16 pt-16 pb-8 md:pb-32'>
+        <div className='flex flex-col md:flex-row items-center justify-between space-x-0 md:space-x-8 px-4 md:px-48 pt-16 pb-8 md:pb-32'>
             <div className='flex flex-col flex-none space-y-3 w-full md:w-1/3'>
                 <h2 className='text-4xl font-bold text-primary'>
                     Nuestros servicios
@@ -24,7 +24,7 @@ const Services = () => {
                     VER MÁS
                 </button>
             </div>
-            <div className='flex flex-col space-y-4 md:space-y-0 md:flex-row justify-center grow relative'>
+            <div className='flex flex-col space-y-4 md:space-y-0 md:flex-row justify-center relative'>
                 <CardServices
                     title='Producción de contenido'
                     icon='/img/icon-video.png'

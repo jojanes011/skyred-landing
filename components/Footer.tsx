@@ -1,7 +1,7 @@
 import Accost from "./index/Accost";
 const Footer = () => {
     return (
-        <div className="flex flex-col items-center space-y-2 md:space-y-0 bg-footer bg-cover text-white pb-2 px-4 md:px-0">
+        <div className="flex flex-col items-center space-y-2 md:space-y-0 bg-footer bg-cover text-white pb-2 px-4 md:px-16">
             <div className="w-full mb-1 border-b-2 border-b-white">
                 <Accost />
             </div>
