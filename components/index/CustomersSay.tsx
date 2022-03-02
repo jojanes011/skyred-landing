@@ -44,7 +44,7 @@ const CustomersSay = ({
                 </div> */}
             <div className='flex flex-row space-x-4 w-1/2 items-center'>
                 <div className='flex flex-col space-y-1 text-center'>
-                    <div className='relative bg-gray-400 w-24 h-24 rounded-full'>
+                    <div className='relative w-24 h-24 rounded-full'>
                         <Image
                             src={image}
                             alt='profile'

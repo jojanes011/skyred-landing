@@ -37,7 +37,7 @@ const Nosotros = () => {
                 </div>
                 <Vision />
                 <Mision />
-                {/* <OurTeam /> */}
+                <OurTeam />
             </div>
         </div>
     );
@@ -50,9 +50,13 @@ const Vision = () => (
         <div className='flex flex-col space-y-2'>
             <h2 className='title'>Visión</h2>
             <p>
-                Somos un equipo con conocimientos multidisciplinarios,
-                apasionados por la producción de contenido, el desarrollo web y
-                el marketing digital.
+                Ser una agencia de marketing digital reconocida a nivel nacional
+                por su enfoque de innovación, inclusión, responsabilidad social
+                y compromiso con los nuevos talentos colombianos para que se
+                conviertan en lideres estratégicos que nos permita apoyar a
+                pequeños y medianos empresarios a posicionar sus marcas en el
+                mundo digital, ofreciéndoles estrategias eficientes que los
+                impulse al cumplimiento de sus objetivos estratégicos.
             </p>
         </div>
         <div></div>
@@ -65,9 +69,10 @@ const Mision = () => (
         <div className='flex flex-col space-y-2'>
             <h2 className='title'>Misión</h2>
             <p>
-                Somos un equipo con conocimientos multidisciplinarios,
-                apasionados por la producción de contenido, el desarrollo web y
-                el marketing digital.
+                Contar con un equipo de trabajo profesional y multidisciplinario
+                que nos permitan comprender las necesidades empresariales de
+                nuestros clientes para diseñar soluciones integrales, eficientes
+                y de valor para sus marcas.
             </p>
         </div>
     </div>
@@ -79,43 +84,43 @@ const OurTeam = () => (
             <h2 className='title'>Nuestro equipo</h2>
         </div>
         <div className='grid grid-flow-col justify-items-center place-content-center gap-8'>
-            <div className='flex flex-col space-y-2 border shadow-md w-48'>
+            <div className='flex flex-col space-y-2 border shadow-md w-56'>
                 <Image
                     src='/img/icon-marketing.png'
                     alt='image'
                     width={48}
                     height={140}
                 />
-                <div className='p-4'>
-                    <p className="font-bold">Santiago Prado</p>
-                    <p className="font-light">COO</p>
-                    <p className="font-light">ING de sistemas</p>
+                <div className='p-4 flex flex-col space-y-2 items-stretch'>
+                    <p className='font-bold'>Maria Fernanda Bravo</p>
+                    <p className='font-light'>Chief Executive Officer (CEO)</p>
+                    <p className='font-light'>ING industrial y diseñador</p>
                 </div>
             </div>
-            <div className='flex flex-col space-y-2 border shadow-md w-48'>
+            <div className='flex flex-col space-y-2 border shadow-md w-56'>
                 <Image
                     src='/img/icon-marketing.png'
                     alt='image'
                     width={48}
                     height={140}
                 />
-                <div className='p-4'>
-                    <p className="font-bold">Santiago Prado</p>
-                    <p className="font-light">COO</p>
-                    <p className="font-light">ING de sistemas</p>
+                <div className='p-4 flex flex-col space-y-2 items-stretch'>
+                    <p className='font-bold'>Santiago Prado</p>
+                    <p className='font-light'>Chief Operating Officer (COO)</p>
+                    <p className='font-light'>ING de sistemas y diseñador</p>
                 </div>
             </div>
-            <div className='flex flex-col space-y-2 border shadow-md w-48'>
+            <div className='flex flex-col space-y-2 border shadow-md w-56'>
                 <Image
                     src='/img/icon-marketing.png'
                     alt='image'
                     width={48}
                     height={140}
                 />
-                <div className='p-4'>
-                    <p className="font-bold">Santiago Prado</p>
-                    <p className="font-light">COO</p>
-                    <p className="font-light">ING de sistemas</p>
+                <div className='p-4 flex flex-col space-y-2 items-stretch'>
+                    <p className='font-bold'>Joan Sebastian Oviedo</p>
+                    <p className='font-light'>Business Digital Developer</p>
+                    <p className='font-light'>ING informático</p>
                 </div>
             </div>
         </div>

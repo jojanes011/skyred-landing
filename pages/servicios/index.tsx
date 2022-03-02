@@ -45,7 +45,7 @@ const Servicios = () => {
                 fontColor='#E85A4D'
             />
             <ServiceSection
-                title='Producción de contenido'
+                title='Creación de contenido'
                 services={produccionServices}
                 fontColor='#ED915E'
             />

@@ -12,7 +12,7 @@ const fakeDataCustomers = [
     {
         id: 1,
         name: "Erika Sánchez",
-        image: "/img/profile.png",
+        image: "/img/logo-cocovanila.png",
         comment:
             "Muy profesionales, excelente atención, servicio al cliente y gestión del marketing digital. ¡Gracias por hacer parte de nuestro equipo! ",
         rating: 5,
@@ -21,11 +21,11 @@ const fakeDataCustomers = [
     {
         id: 2,
         name: "Fernando Bolaños",
-        image: "/img/profile.png",
+        image: "/img/logo-precitop.png",
         comment:
             "la calidad de sus servicios y el acompañamiento constante de todo el equipo ha sido primordial para el éxito de nuestra marca.",
         rating: 5,
-        title: "Gerente general de Precitop",
+        title: "Gerente general de Soluciones Exactas Precitop",
     },
 ];
 

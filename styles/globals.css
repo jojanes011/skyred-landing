@@ -19,7 +19,7 @@ html * {
 }
 
 .btn-transparent {
-    @apply w-1/2 md:w-1/5 py-1 rounded-full border border-white drop-shadow-2xl shadow-white bg-gradient-to-tr from-transparent via-colorTransparent to-transparent;
+    @apply w-1/2 lg:w-1/5 py-1 rounded-full border border-white drop-shadow-2xl shadow-white bg-gradient-to-tr from-transparent via-colorTransparent to-transparent;
 }
 
 .btn-transparent-square {

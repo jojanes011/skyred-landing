@@ -5,14 +5,14 @@ const Footer = () => {
             <div className="w-full mb-1 border-b-2 border-b-white">
                 <Accost />
             </div>
-            <div className='flex flex-row py-2 justify-around mx-auto w-full'>
+            <div className='flex flex-row py-2 space-x-4 justify-around w-full break-words'>
                 <div className='flex flex-col space-y-1'>
                     <h3 className='font-semibold text-lg'>Contáctanos</h3>
                     <div className='flex flex-row  place-items-center space-x-2'>
                         <div className='w-6 text-center'>
                             <i className='fas text-2xl fa-mobile mt-1'></i>
                         </div>
-                        <span>+57 (3156843651)</span>
+                        <a href="https://wa.link/twk436">+57 (315 684 3651)</a>
                     </div>
                     <div className='flex flex-row  place-items-center space-x-2'>
                         <div className='w-6 text-center'>
@@ -39,9 +39,9 @@ const Footer = () => {
                 </div>
                 <div className='flex flex-col space-y-1'>
                     <h3 className='font-semibold text-lg'>Accesos rápidos</h3>
-                    <p>• Preguntas frecuentes</p>
+                    <a href="/portafolio">• Portafolio</a>
                     {/* <p>• ’Nombre de tienda’</p> */}
-                    <p>• Contáctanos</p>
+                    <a href="/contactanos">• Contáctanos</a>
                     <div className='flex flex-row space-x-4 text-2xl'>
                         <a href="https://www.facebook.com/skyredmarketing/">
                             <i className='fab fa-facebook-f pt-2'></i>
