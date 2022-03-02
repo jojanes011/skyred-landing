@@ -12,14 +12,14 @@ const Main = () => {
     return (
         <div className='flex flex-col justify-between bg-main bg-cover bg-bottom text-white space-y-8 px-4 md:px-16 pt-8 py-32 md:py-8'>
             <div className='flex sm:flex-row md:flex-col lg:flex-row items-center sm:space-x-8 md:space-x-0 lg:space-x-8 md:space-y-4 justify-between sm:pb-0 md:pb-8 lg:pb-0'>
-                <a href='/'>
+                <Link href='/'>
                     <Image
                         width={148}
                         height={42}
                         alt='logo'
                         src='/img/logo.png'
                     />
-                </a>
+                </Link>
                 <div className='hidden md:flex flex-row sm:space-x-8 md:space-x-4 lg:space-x-8 text-base sm:text-sm md:text-base justify-around font-bold'>
                     <Link href='/'>INICIO</Link>
                     <Link href='/servicios'>SERVICIOS</Link>

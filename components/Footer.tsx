@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Accost from "./index/Accost";
 const Footer = () => {
     return (
@@ -12,7 +13,7 @@ const Footer = () => {
                         <div className='w-6 text-center'>
                             <i className='fas text-2xl fa-mobile mt-1'></i>
                         </div>
-                        <a href="https://wa.link/twk436">+57 (315 684 3651)</a>
+                        <Link href="https://wa.link/twk436">+57 (315 684 3651)</Link>
                     </div>
                     <div className='flex flex-row  place-items-center space-x-2'>
                         <div className='w-6 text-center'>
@@ -39,24 +40,24 @@ const Footer = () => {
                 </div>
                 <div className='flex flex-col space-y-1'>
                     <h3 className='font-semibold text-lg'>Accesos rápidos</h3>
-                    <a href="/portafolio">• Portafolio</a>
+                    <Link href="/portafolio">• Portafolio</Link>
                     {/* <p>• ’Nombre de tienda’</p> */}
-                    <a href="/contactanos">• Contáctanos</a>
+                    <Link href="/contactanos">• Contáctanos</Link>
                     <div className='flex flex-row space-x-4 text-2xl'>
-                        <a href="https://www.facebook.com/skyredmarketing/">
+                        <Link href="https://www.facebook.com/skyredmarketing/">
                             <i className='fab fa-facebook-f pt-2'></i>
-                        </a>
-                        <a href="https://www.instagram.com/skyredmarketing/">
+                        </Link>
+                        <Link href="https://www.instagram.com/skyredmarketing/">
                             <i className='fab fa-instagram pt-2'></i>
-                        </a>
+                        </Link>
                         {/* <i className='fab fa-youtube pt-2'></i> */}
-                        <a href="https://tiktok.com/@skyredmarketing">
+                        <Link href="https://tiktok.com/@skyredmarketing">
                             <i className='fab fa-tiktok pt-2'></i>
-                        </a>
+                        </Link>
                         {/* <i className='fab fa-twitter pt-2'></i> */}
-                        <a href="https://wa.link/twk436">
+                        <Link href="https://wa.link/twk436">
                             <i className='fab fa-whatsapp pt-2'></i>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

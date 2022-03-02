@@ -18,14 +18,14 @@ const Header = ({ title = "", titleBreadcrumb = "" }: HeaderInterface) => {
     return (
         <div className='flex flex-col justify-between bg-header bg-cover text-white space-y-4 px-16 py-8'>
             <div className='flex flex-row items-center justify-between'>
-                <a href='/'>
+                <Link href='/'>
                     <Image
                         width={148}
                         height={42}
                         alt='logo'
                         src='/img/logo.png'
                     />
-                </a>
+                </Link>
                 <div className='hidden md:flex flex-row space-x-8 justify-around font-bold'>
                     <Link href='/'>INICIO</Link>
                     <Link href='/servicios'>SERVICIOS</Link>
