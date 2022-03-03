@@ -14,7 +14,7 @@ const Nosotros = () => {
                         </video>
                     </div>
                     <div className='flex flex-col space-y-4 w-full md:w-1/2'>
-                        <h2 className='title'>Sobre nosotros</h2>
+                        <h2 className='title'>SOBRE NOSOTROS</h2>
                         <p>
                             Somos un equipo con conocimientos
                             multidisciplinarios, apasionados por la producción
@@ -81,9 +81,9 @@ const Mision = () => (
 const OurTeam = () => (
     <div className='px-32 flex flex-col items-center space-y-4'>
         <div>
-            <h2 className='title'>Nuestro equipo</h2>
+            <h2 className='title text-center'>Nuestro equipo</h2>
         </div>
-        <div className='grid grid-flow-col justify-items-center place-content-center gap-8'>
+        <div className='flex flex-col space-y-4 space-x-0 md:flex-row md:space-y-0 md:space-x-8 justify-center'>
             <div className='flex flex-col space-y-2 border shadow-md w-56'>
                 <Image
                     src='/img/icon-marketing.png'

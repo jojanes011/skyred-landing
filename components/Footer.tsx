@@ -6,8 +6,8 @@ const Footer = () => {
             <div className="w-full mb-1 border-b-2 border-b-white">
                 <Accost />
             </div>
-            <div className='flex flex-row py-2 space-x-4 justify-around w-full break-words'>
-                <div className='flex flex-col space-y-1'>
+            <div className='flex flex-col md:flex-row py-2 space-x-0 space-y-4 md:space-y-0 md:space-x-4 items-center md:items-start justify-around w-full break-words'>
+                <div className='flex flex-col items-center md:items-start space-y-1'>
                     <h3 className='font-semibold text-lg'>Contáctanos</h3>
                     <div className='flex flex-row  place-items-center space-x-2'>
                         <div className='w-6 text-center'>
@@ -31,14 +31,14 @@ const Footer = () => {
                         <span>info@skyredmarketing.com</span>
                     </div>
                 </div>
-                <div className='hidden md:flex flex-col space-y-1'>
+                <div className='flex flex-col items-center md:items-start space-y-1'>
                     <h3 className='font-semibold text-lg'>Servicios</h3>
                     <p>• Creación de contenido </p>
                     <p>• Marketing en medios digitales </p>
                     <p>• Diseño y desarrollo de páginas web </p>
                     <p>• Gestión y administración de redes sociales </p>
                 </div>
-                <div className='flex flex-col space-y-1'>
+                <div className='flex flex-col items-center md:items-start space-y-1'>
                     <h3 className='font-semibold text-lg'>Accesos rápidos</h3>
                     <Link href="/portafolio">• Portafolio</Link>
                     {/* <p>• ’Nombre de tienda’</p> */}

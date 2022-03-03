@@ -13,6 +13,9 @@ module.exports = {
                 experience: "url('/img/experience.png')",
                 footer: "url('/img/bg-footer.png')",
                 header: "url('/img/bg-header.png')",
+                plan_1: "url('/img/plan-1.png')",
+                plan_2: "url('/img/plan-2.png')",
+                plan_3: "url('/img/plan-3.png')",
             }),
             colors: {
                 primary: "#ED915E",
