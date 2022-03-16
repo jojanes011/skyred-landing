@@ -45,10 +45,9 @@ const CustomersSay = ({
             <div className='flex flex-row space-x-4 w-1/2 items-center'>
                 <div className='flex flex-col space-y-1 text-center'>
                     <div className='relative w-24 h-24 rounded-full'>
-                        <Image
+                        <img
                             src={image}
                             alt='profile'
-                            layout='fill'
                             className='rounded-full'
                         />
                     </div>

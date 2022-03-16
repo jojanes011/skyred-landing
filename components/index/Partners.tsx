@@ -7,7 +7,7 @@ const Partners = () => {
             <h2 className='font-semibold text-2xl'>Nuestros partners</h2>
             <div className="flex flex-row justify-center space-x-2 md:space-x-16">
                 <div>
-                    <Image
+                    <img
                         alt='partners'
                         src='/img/partners.png'
                         width={150}
@@ -15,7 +15,7 @@ const Partners = () => {
                     />
                 </div>
                 <div>
-                    <Image
+                    <img
                         alt='partners'
                         src='/img/partners.png'
                         width={150}
@@ -23,7 +23,7 @@ const Partners = () => {
                     />
                 </div>
                 <div>
-                    <Image
+                    <img
                         alt='partners'
                         src='/img/partners.png'
                         width={150}
@@ -31,7 +31,7 @@ const Partners = () => {
                     />
                 </div>
                 <div>
-                    <Image
+                    <img
                         alt='partners'
                         src='/img/partners.png'
                         width={150}

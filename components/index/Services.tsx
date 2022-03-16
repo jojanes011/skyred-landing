@@ -80,7 +80,7 @@ const CardServices = ({
         className={`flex flex-col bg-white justify-between items-center space-y-2 shadow-xl rounded-md py-4 px-8 w-60 ${className}`}>
         <h2 className='font-semibold text-center'>{title}</h2>
         <div>
-            <Image width={100} height={100} alt={title} src={icon}></Image>
+            <img width={100} height={100} alt={title} src={icon} />
         </div>
         <div className='flex flex-col space-y-1'>
             {subtitles.map((subtitle) => (

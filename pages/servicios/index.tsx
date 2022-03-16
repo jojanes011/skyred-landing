@@ -26,7 +26,7 @@ const webServices = [
 const Servicios = () => {
     return (
         <div>
-            <Header title='Servicios' titleBreadcrumb='Servicios' />
+            <Header title='SERVICIOS' titleBreadcrumb='Servicios' />
             <div className='flex flex-col'>
                 <p className='p-4 md:p-16'>
                     En nuestra torre de control trabajamos en pro de la

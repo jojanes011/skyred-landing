@@ -19,7 +19,8 @@ const Header = ({ title = "", titleBreadcrumb = "" }: HeaderInterface) => {
         <div className='flex flex-col justify-between bg-header bg-cover text-white space-y-4 px-16 py-8'>
             <div className='flex flex-row items-center justify-between'>
                 <Link href='/'>
-                    <Image
+                    <img
+                        className="cursor-pointer"
                         width={148}
                         height={42}
                         alt='logo'
@@ -32,7 +33,7 @@ const Header = ({ title = "", titleBreadcrumb = "" }: HeaderInterface) => {
                     <Link href='/nosotros'>NOSOTROS</Link>
                     <Link href='/portafolio'>PORTAFOLIO</Link>
                     <Link href='/planes'>PLANES</Link>
-                    <Link href='/blog'>BLOG</Link>
+                    {/* <Link href='/blog'>BLOG</Link> */}
                     <Link href='/contactanos'>CONTÁCTANOS</Link>
                 </div>
                 <button
@@ -49,7 +50,7 @@ const Header = ({ title = "", titleBreadcrumb = "" }: HeaderInterface) => {
                     <Link href='/nosotros'>NOSOTROS</Link>
                     <Link href='/portafolio'>PORTAFOLIO</Link>
                     <Link href='/planes'>PLANES</Link>
-                    <Link href='/blog'>BLOG</Link>
+                    {/* <Link href='/blog'>BLOG</Link> */}
                     <Link href='/contactanos'>CONTÁCTANOS</Link>
                 </div>
             ) : (

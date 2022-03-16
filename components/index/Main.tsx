@@ -13,7 +13,8 @@ const Main = () => {
         <div className='flex flex-col justify-between bg-main bg-cover bg-bottom text-white space-y-8 px-4 md:px-16 pt-8 py-32 md:py-8'>
             <div className='flex sm:flex-row md:flex-col lg:flex-row items-center sm:space-x-8 md:space-x-0 lg:space-x-8 md:space-y-4 justify-between sm:pb-0 md:pb-8 lg:pb-0'>
                 <Link href='/'>
-                    <Image
+                    <img
+                        className="cursor-pointer"
                         width={148}
                         height={42}
                         alt='logo'
@@ -26,7 +27,7 @@ const Main = () => {
                     <Link href='/nosotros'>NOSOTROS</Link>
                     <Link href='/portafolio'>PORTAFOLIO</Link>
                     <Link href='/planes'>PLANES</Link>
-                    <Link href='/blog'>BLOG</Link>
+                    {/* <Link href='/blog'>BLOG</Link> */}
                     <Link href='/contactanos'>CONTÁCTANOS</Link>
                 </div>
                 <button
@@ -43,7 +44,7 @@ const Main = () => {
                     <Link href='/nosotros'>NOSOTROS</Link>
                     <Link href='/portafolio'>PORTAFOLIO</Link>
                     <Link href='/planes'>PLANES</Link>
-                    <Link href='/blog'>BLOG</Link>
+                    {/* <Link href='/blog'>BLOG</Link> */}
                     <Link href='/contactanos'>CONTÁCTANOS</Link>
                 </div>
             ) : (
@@ -51,7 +52,7 @@ const Main = () => {
             )}
             <div className='flex flex-col md:flex-row items-center justify-between py-4 h-96'>
                 <div className='flex flex-col space-y-4 w-full md:w-1/2'>
-                    <h1 className='font-extrabold text-4xl lg:text-5xl'>
+                    <h1 className='font-black text-4xl lg:text-5xl'>
                         SOMOS UNA AGENCIA DE MARKETING DIGITAL Y DESARROLLO WEB
                     </h1>
                     <p>
@@ -59,12 +60,12 @@ const Main = () => {
                         quieran hacer un viaje hacia el espacio del aprendizaje
                         y éxito de sus marcas
                     </p>
-                    <button type='button' className='btn-transparent'>
+                    <button type='button' className='w-1/2 btn-transparent'>
                         DESPEGAR
                     </button>
                 </div>
                 <div className='md:flex hidden'>
-                    <Image
+                    <img
                         width={350}
                         height={350}
                         alt='rocket'

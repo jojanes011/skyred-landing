@@ -7,17 +7,19 @@ const Planes = () => {
             <Header title='PLANES' titleBreadcrumb='PLANES' />
             <div className='flex flex-col'>
                 <p className='px-4 md:px-32 py-4 md:py-16'>
-                    Hemos diseñado 3 tipos de planes para nuestros viajeros que
-                    son 100% personalizables porque sabemos que todas las marcas
-                    tienen necesidades diferentes. Conoce a continuación lo que
-                    incluye cada uno, si tienes alguna duda contáctanos de
-                    inmediato para brindarte una asesoría integral y planear el
-                    día de despegue para que tu marca llegue a un espacio lleno
-                    de éxito.
+                    Hemos diseñado <strong>3 tipos de planes</strong> para
+                    nuestros viajeros que son{" "}
+                    <strong>100% personalizables</strong> porque sabemos que
+                    todas las marcas tienen necesidades diferentes. Conoce a
+                    continuación <strong>lo que incluye cada uno,</strong> si
+                    tienes alguna duda contáctanos de inmediato para{" "}
+                    <strong>brindarte una asesoría integral</strong> y planear
+                    el día de despegue para que tu marca llegue a un espacio{" "}
+                    <strong>lleno de éxito.</strong>
                 </p>
                 <SectionPlan
                     title='MARKETING'
-                    description='Definir un branding con exclusividad, innovación e impacto es fundamental para posicionar tu marca en los medios digitales. Para ello, te ofrecemos 2 planes para la construcción de tu identidad de marca.'
+                    description='Para cumplir con los objetivos estratégicos de tu marca, es importante <strong>crear contenido que genere valor e interacción con tu audiencia o público objetivo.</strong> A continuación, te presentamos tres planes diferentes para el diseño y gestión del contenido de tus redes sociales.'
                     cards={[
                         {
                             title: "BASICO",
@@ -70,7 +72,7 @@ const Planes = () => {
                 />
                 <SectionPlan
                     title='DESARROLLO WEB'
-                    description='Sin importar el tamaño o tipo de empresa, tener un sitio web se ha convertido en una catapulta para aumentar el alcance, posicionamiento y las ventas de tu negocio. Conoce las diferentes opciones que te ofrecemos para diseñar y desarrollar tu sitio web de alta calidad.'
+                    description='Sin importar el tamaño o tipo de empresa, tener un sitio web se ha convertido en una catapulta para <strong>aumentar el alcance, posicionamiento y las ventas de tu negocio.</strong> Conoce las diferentes opciones que te ofrecemos para diseñar y desarrollar tu sitio web de alta calidad.'
                     cards={[
                         {
                             title: "LANDING PAGE",
@@ -126,7 +128,7 @@ const Planes = () => {
                 />
                 <SectionPlan
                     title='BRANDING'
-                    description='Para cumplir con los objetivos estratégicos de tu marca, es importante crear contenido que genere valor e interacción con tu audiencia o público objetivo. A continuación, te presentamos tres planes diferentes para el diseño y gestión del contenido de tus redes sociales'
+                    description='Definir un <strong>branding con exclusividad, innovación e impacto</strong> es fundamental para posicionar tu marca en los medios digitales. Para ello, <strong>te ofrecemos 2 planes</strong> para la construcción de tu identidad de marca.'
                     cards={[
                         {
                             title: "BASICO",
@@ -172,56 +174,53 @@ const SectionPlan = ({
     title = "",
     description = "",
     cards = [],
-}: SectionPlanInterface) => {
-    console.log("cards", cards);
-    return (
-        <div className='flex flex-col space-y-8 items-center px-4 md:px-32 mt-8'>
-            <h2 className='title'>{title}</h2>
-            <p>{description}</p>
-            <div className={'flex flex-col lg:flex-row space-x-0 space-y-8 lg:space-y-0 lg:space-x-8 py-8 ' + (cards.length <= 2 ? 'lg:w-2/3' : 'w-full')}>
-                {cards.map((card) => (
+}: SectionPlanInterface) => (
+    <div className='flex flex-col space-y-8 items-center px-4 md:px-32 mt-8'>
+        <h2 className='title'>{title}</h2>
+        <p dangerouslySetInnerHTML={{__html: description}} />
+        <div
+            className={
+                "flex flex-col lg:flex-row space-x-0 space-y-8 lg:space-y-0 lg:space-x-8 py-8 " +
+                (cards.length <= 2 ? "lg:w-2/3" : "w-full")
+            }>
+            {cards.map((card) => (
+                <div
+                    key={card.title}
+                    className='flex flex-col items-center text-center rounded-lg shadow-2xl'>
+                    {card.popular ? (
+                        <div className='text-center py-1'>
+                            <h6 className='uppercase subtitle'>más popular</h6>
+                        </div>
+                    ) : (
+                        <></>
+                    )}
                     <div
-                        key={card.title}
-                        className='flex flex-col items-center text-center rounded-lg shadow-2xl'>
-                        {card.popular ? (
-                            <div className='text-center py-1'>
-                                <h6 className='uppercase subtitle'>
-                                    más popular
-                                </h6>
-                            </div>
-                        ) : (
-                            <></>
-                        )}
-                        <div
-                            className={
-                                "w-full flex flex-col justify-center items-center space-y-2 px-8 py-20 rounded-lg text-white bg-cover " +
-                                card.background
-                            }>
-                            <h5 className='text-2xl'>PLAN</h5>
-                            <h4 className='text-3xl font-extrabold'>
-                                {card.title}
-                            </h4>
-                            <button
-                                type='button'
-                                className='btn-transparent w-1/2 px-4'>
-                                LO QUIERO
-                            </button>
-                        </div>
-                        <div className='flex flex-col space-y-4 px-8 py-4 justify-center text-left'>
-                            {card.lines.map((line: string) => (
-                                <div
-                                    key={line}
-                                    className='flex flex-row space-x-2'>
-                                    <i className='fas fa-circle text-primary mt-1' />
-                                    <label className="text-sm">{line}</label>
-                                </div>
-                            ))}
-                        </div>
+                        className={
+                            "w-full flex flex-col justify-center items-center space-y-2 px-8 py-20 rounded-lg text-white bg-cover " +
+                            card.background
+                        }>
+                        <h5 className='text-2xl'>PLAN</h5>
+                        <h4 className='text-3xl font-extrabold'>
+                            {card.title}
+                        </h4>
+                        <button
+                            type='button'
+                            className='btn-transparent w-1/2 px-4'>
+                            LO QUIERO
+                        </button>
                     </div>
-                ))}
-            </div>
+                    <div className='flex flex-col space-y-4 px-8 py-4 justify-center text-left'>
+                        {card.lines.map((line: string) => (
+                            <div key={line} className='flex flex-row space-x-2'>
+                                <i className='fas fa-circle text-primary mt-1' />
+                                <label className='text-sm'>{line}</label>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            ))}
         </div>
-    );
-};
+    </div>
+);
 
 export default Planes;
