@@ -17,7 +17,7 @@ const ServiceSection = ({
             <div>
                 <h2 className={`text-4xl font-bold text-[${fontColor}]`}>{title}</h2>
             </div>
-            <div className='flex flex-wrap flex-row justify-around sm:space-x-8 space-y-4 sm:space-y-0'>
+            <div className='grid grid-cols-2 md:grid-flow-col gap-8'>
                 {services.map(({image, name}, key) => (
                     <div className="border border-gray-300 rounded-md shadow-xl flex flex-col space-y-2 items-center text-center p-4" key={key}>
                         <div className="p-4">
