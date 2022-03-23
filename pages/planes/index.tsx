@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import Header from "../../components/Header";
 
@@ -174,53 +176,68 @@ const SectionPlan = ({
     title = "",
     description = "",
     cards = [],
-}: SectionPlanInterface) => (
-    <div className='flex flex-col space-y-8 items-center px-4 md:px-32 mt-8'>
-        <h2 className='title'>{title}</h2>
-        <p dangerouslySetInnerHTML={{__html: description}} />
-        <div
-            className={
-                "flex flex-col lg:flex-row space-x-0 space-y-8 lg:space-y-0 lg:space-x-8 py-8 " +
-                (cards.length <= 2 ? "lg:w-2/3" : "w-full")
-            }>
-            {cards.map((card) => (
-                <div
-                    key={card.title}
-                    className='flex flex-col items-center text-center rounded-lg shadow-2xl'>
-                    {card.popular ? (
-                        <div className='text-center py-1'>
-                            <h6 className='uppercase subtitle'>más popular</h6>
-                        </div>
-                    ) : (
-                        <></>
-                    )}
+}: SectionPlanInterface) => {
+    const router = useRouter();
+
+    const redirect = () => {
+        router.push("https://wa.link/twk436");
+    };
+
+    return (
+        <div className='flex flex-col space-y-8 items-center px-4 md:px-32 mt-8'>
+            <h2 className='title'>{title}</h2>
+            <p dangerouslySetInnerHTML={{ __html: description }} />
+            <div
+                className={
+                    "flex flex-col lg:flex-row space-x-0 space-y-8 lg:space-y-0 lg:space-x-8 py-8 " +
+                    (cards.length <= 2 ? "lg:w-2/3" : "w-full")
+                }>
+                {cards.map((card) => (
                     <div
-                        className={
-                            "w-full flex flex-col justify-center items-center space-y-2 px-8 py-20 rounded-lg text-white bg-cover " +
-                            card.background
-                        }>
-                        <h5 className='text-2xl'>PLAN</h5>
-                        <h4 className='text-3xl font-extrabold'>
-                            {card.title}
-                        </h4>
-                        <button
-                            type='button'
-                            className='btn-transparent w-1/2 px-4'>
-                            LO QUIERO
-                        </button>
-                    </div>
-                    <div className='flex flex-col space-y-4 px-8 py-4 justify-center text-left'>
-                        {card.lines.map((line: string) => (
-                            <div key={line} className='flex flex-row space-x-2'>
-                                <i className='fas fa-circle text-primary mt-1' />
-                                <label className='text-sm'>{line}</label>
+                        key={card.title}
+                        className='flex flex-col items-center text-center rounded-lg shadow-2xl'>
+                        {card.popular ? (
+                            <div className='text-center py-1'>
+                                <h6 className='uppercase subtitle'>
+                                    más popular
+                                </h6>
                             </div>
-                        ))}
+                        ) : (
+                            <></>
+                        )}
+                        <div
+                            className={
+                                "w-full flex flex-col justify-center items-center space-y-2 px-8 py-20 rounded-lg text-white bg-cover " +
+                                card.background
+                            }>
+                            <h5 className='text-2xl'>PLAN</h5>
+                            <h4 className='text-3xl font-extrabold'>
+                                {card.title}
+                            </h4>
+                            <button
+                                type='button'
+                                onClick={redirect}
+                                className='btn-transparent w-1/2 px-4'>
+                                <Link href='https://wa.link/twk436'>
+                                    LO QUIERO
+                                </Link>
+                            </button>
+                        </div>
+                        <div className='flex flex-col space-y-4 px-8 py-4 justify-center text-left'>
+                            {card.lines.map((line: string) => (
+                                <div
+                                    key={line}
+                                    className='flex flex-row space-x-2'>
+                                    <i className='fas fa-circle text-primary mt-1' />
+                                    <label className='text-sm'>{line}</label>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
-    </div>
-);
+    );
+};
 
 export default Planes;

@@ -1,14 +1,17 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 const AboutUs = () => {
+    const router = useRouter();
+
+    const redirect = () => {
+        router.push("/nosotros");
+    };
+
     return (
         <div className='flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-16 py-8 px-4 md:px-48 space-y-4 md:space-y-0'>
             <div className='w-full lg:w-1/2'>
-                <video
-                    autoPlay
-                    loop
-                    poster="/img/video.png"
-                    >
+                <video autoPlay loop poster='/img/video.png'>
                     <source src='/video/blue.mp4' />
                 </video>
             </div>
@@ -29,7 +32,10 @@ const AboutUs = () => {
                     creando estrategias que te permitan generar conexiones
                     amigables con tu público objetivo.
                 </p>
-                <button type='button' className='btn-primary w-1/3'>
+                <button
+                    type='button'
+                    onClick={redirect}
+                    className='btn-primary w-1/3'>
                     VER MÁS
                 </button>
             </div>

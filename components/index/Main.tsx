@@ -1,9 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 
 const Main = () => {
     const [showMenu, setShowMenu] = useState(false);
+    const router = useRouter();
+
+    const redirect = () => {
+        router.push("/planes");
+    };
 
     const handleClickShowMenu = () => {
         setShowMenu(!showMenu);
@@ -13,8 +19,8 @@ const Main = () => {
         <div className='flex flex-col justify-between bg-main bg-cover bg-bottom text-white space-y-8 px-4 md:px-16 pt-8 py-32 md:py-8'>
             <div className='flex sm:flex-row md:flex-col lg:flex-row items-center sm:space-x-8 md:space-x-0 lg:space-x-8 md:space-y-4 justify-between sm:pb-0 md:pb-8 lg:pb-0'>
                 <Link href='/'>
-                    <img
-                        className="cursor-pointer"
+                    <Image
+                        className='cursor-pointer'
                         width={148}
                         height={42}
                         alt='logo'
@@ -60,12 +66,15 @@ const Main = () => {
                         quieran hacer un viaje hacia el espacio del aprendizaje
                         y éxito de sus marcas
                     </p>
-                    <button type='button' className='w-1/2 btn-transparent'>
+                    <button
+                        onClick={redirect}
+                        type='button'
+                        className='w-1/2 btn-transparent'>
                         DESPEGAR
                     </button>
                 </div>
                 <div className='md:flex hidden'>
-                    <img
+                    <Image
                         width={350}
                         height={350}
                         alt='rocket'

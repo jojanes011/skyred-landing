@@ -85,7 +85,7 @@ const OurTeam = () => (
         </div>
         <div className='flex flex-col space-y-4 space-x-0 md:flex-row md:space-y-0 md:space-x-8 justify-center'>
             <div className='flex flex-col space-y-2 border shadow-md w-56'>
-                <img
+                <Image
                     src='/img/icon-marketing.png'
                     alt='image'
                     width={48}
@@ -98,7 +98,7 @@ const OurTeam = () => (
                 </div>
             </div>
             <div className='flex flex-col space-y-2 border shadow-md w-56'>
-                <img
+                <Image
                     src='/img/icon-marketing.png'
                     alt='image'
                     width={48}
@@ -111,7 +111,7 @@ const OurTeam = () => (
                 </div>
             </div>
             <div className='flex flex-col space-y-2 border shadow-md w-56'>
-                <img
+                <Image
                     src='/img/icon-marketing.png'
                     alt='image'
                     width={48}

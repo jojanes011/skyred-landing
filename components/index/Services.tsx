@@ -1,7 +1,14 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 
 const Services = () => {
+    const router = useRouter();
+
+    const redirect = () => {
+        router.push("/servicios");
+    };
+
     return (
         <div className='flex flex-col lg:flex-row items-center justify-between space-x-0 md:space-x-8 space-y-4 px-4 md:px-48 pt-8 lg:pt-16 pb-8 md:pb-32'>
             <div className='flex flex-col flex-none space-y-3 w-full md:w-2/3 lg:w-1/3'>
@@ -18,12 +25,16 @@ const Services = () => {
                     continuación, te contamos todo lo que tenemos para tu
                     entorno empresarial.
                 </p>
-                <button type='button' className='btn-primary w-1/2'>
+                <button
+                    onClick={redirect}
+                    type='button'
+                    className='btn-primary w-1/2'>
                     VER MÁS
                 </button>
             </div>
             <div className='flex flex-col space-y-4 md:space-y-0 md:flex-row justify-center relative'>
                 <CardServices
+                    redirect={redirect}
                     title='Creación de contenido'
                     icon='/img/icon-video.png'
                     subtitles={[
@@ -35,6 +46,7 @@ const Services = () => {
                     className=''
                 />
                 <CardServices
+                    redirect={redirect}
                     title='Marketing'
                     icon='/img/icon-marketing.png'
                     subtitles={[
@@ -46,6 +58,7 @@ const Services = () => {
                     className='md:absolute md:top-16 md:z-50'
                 />
                 <CardServices
+                    redirect={redirect}
                     title='Diseño y desarrollo web'
                     icon='/img/icon-web.png'
                     subtitles={[
@@ -67,6 +80,7 @@ interface CardServicesInterface {
     subtitles: Array<any>;
     urlRedirect: string;
     className?: string;
+    redirect: any;
 }
 
 const CardServices = ({
@@ -75,12 +89,13 @@ const CardServices = ({
     subtitles = [],
     urlRedirect = "",
     className = "",
+    redirect = () => {},
 }: CardServicesInterface) => (
     <div
         className={`flex flex-col bg-white justify-between items-center space-y-2 shadow-xl rounded-md py-4 px-8 w-60 ${className}`}>
         <h2 className='font-semibold text-center'>{title}</h2>
         <div>
-            <img width={100} height={100} alt={title} src={icon} />
+            <Image width={100} height={100} alt={title} src={icon} />
         </div>
         <div className='flex flex-col space-y-1'>
             {subtitles.map((subtitle) => (
@@ -89,7 +104,7 @@ const CardServices = ({
                 </div>
             ))}
         </div>
-        <button type='button' className='btn-primary'>
+        <button type='button' onClick={redirect} className='btn-primary'>
             VER MÁS
         </button>
     </div>

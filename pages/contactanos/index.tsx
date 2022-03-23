@@ -11,10 +11,10 @@ const Contactanos = () => {
 
         emailjs
             .sendForm(
-                "service_6d03yf4",
+                process.env.EMAIL_JS_SERVICE_ID as string,
                 "template_ki7iixi",
                 form.current,
-                "lVa-vUEWOTgwPNCf7"
+                process.env.EMAIL_JS_USER_ID
             )
             .then(
                 (result) => {
@@ -25,18 +25,19 @@ const Contactanos = () => {
                 }
             );
     };
+    console.log(process.env.EMAIL_JS_USER_ID)
 
     return (
         <div>
             <Header title='CONTÁCTANOS' titleBreadcrumb='Contactanos' />
-            <div className='flex flex-col md:flex-row md:space-x-8 justify-center items-center px-32 py-16'>
-                <div className='flex flex-col space-y-4 w-full'>
+            <div className='flex flex-col md:flex-row md:space-x-8 justify-center items-center px-4 md:px-32 py-8 md:py-16'>
+                <div className='flex flex-row space-x-8 md:space-x-0 md:flex-col space-y-0 md:space-y-4 w-full justify-center'>
                     <div className='flex flex-row place-items-center space-x-4 cursor-pointer'>
                         <div className='w-6 text-center'>
                             <i className='fab text-3xl fa-whatsapp mt-1 text-secondary'></i>
                         </div>
                         <Link href='https://wa.link/twk436'>
-                            <a target='_blank' className='text-lg'>
+                            <a target='_blank' className='text-lg hidden md:block'>
                                 +57 (315 684 3651)
                             </a>
                         </Link>
@@ -45,14 +46,14 @@ const Contactanos = () => {
                         <div className='w-6 text-center'>
                             <i className='fas text-3xl fa-envelope mt-1 text-secondary'></i>
                         </div>
-                        <p className='text-lg'>info@skyredmarketing.com</p>
+                        <p className='text-lg hidden md:block'>info@skyredmarketing.com</p>
                     </div>
                     <div className='flex flex-row place-items-center space-x-4 cursor-pointer'>
                         <div className='w-6 text-center'>
                             <i className='fab text-3xl fa-facebook mt-1 text-secondary'></i>
                         </div>
                         <Link href='https://www.facebook.com/skyredmarketing/'>
-                            <a target='_blank' className='text-lg'>
+                            <a target='_blank' className='text-lg hidden md:block'>
                                 https://www.facebook.com/skyredmarketing/
                             </a>
                         </Link>
@@ -62,7 +63,7 @@ const Contactanos = () => {
                             <i className='fab text-3xl fa-instagram mt-1 text-secondary'></i>
                         </div>
                         <Link href='https://www.instagram.com/skyredmarketing/'>
-                            <a target='_blank' className='text-lg'>
+                            <a target='_blank' className='text-lg hidden md:block'>
                                 https://www.instagram.com/skyredmarketing/
                             </a>
                         </Link>
@@ -72,7 +73,7 @@ const Contactanos = () => {
                             <i className='fab text-3xl fa-tiktok mt-1 text-secondary'></i>
                         </div>
                         <Link href='https://tiktok.com/@skyredmarketing'>
-                            <a target='_blank' className='text-lg'>
+                            <a target='_blank' className='text-lg hidden md:block'>
                                 https://tiktok.com/@skyredmarketing
                             </a>
                         </Link>
@@ -82,13 +83,13 @@ const Contactanos = () => {
                             <i className='fab text-3xl fa-linkedin mt-1 text-secondary'></i>
                         </div>
                         <Link href='https://www.linkedin.com/company/sky-red-marketing/'>
-                            <a target='_blank' className='text-lg'>
+                            <a target='_blank' className='text-lg hidden md:block'>
                                 https://www.linkedin.com/company/sky-red-marketing/
                             </a>
                         </Link>
                     </div>
                 </div>
-                <div className='w-full py-4'>
+                <div className='flex flex-col space-y-4 w-full py-4'>
                     <h6 className='text-center subtitle'>
                         Envianos un mensaje
                     </h6>
