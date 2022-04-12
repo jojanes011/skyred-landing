@@ -5,17 +5,19 @@ interface ServiceSectionInterface {
     title: string;
     services: Array<any>;
     fontColor: string;
+    className?: string;
 }
 
 const ServiceSection = ({
     title = "",
     services = [],
     fontColor = "primary",
+    className = "",
 }: ServiceSectionInterface) => {
     return (
-        <div className='flex flex-col space-y-8 items-center text-center pb-8 px-4'>
+        <div className={'flex flex-col space-y-8 items-center text-center px-4 pt-8 ' + className}>
             <div>
-                <h2 className={`text-4xl font-bold text-[${fontColor}]`}>{title}</h2>
+                <h2 className={`text-4xl font-bold text-${fontColor}`}>{title}</h2>
             </div>
             <div className='grid grid-cols-2 md:grid-flow-col gap-8'>
                 {services.map(({image, name}, key) => (

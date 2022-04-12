@@ -92,7 +92,8 @@ const CardServices = ({
     redirect = () => {},
 }: CardServicesInterface) => (
     <div
-        className={`flex flex-col bg-white justify-between items-center space-y-2 shadow-xl rounded-md py-4 px-8 w-60 ${className}`}>
+        style={{boxShadow: '0px 10px 20px #A9A9A9'}}
+        className={`flex flex-col bg-white justify-between items-center space-y-2 shadow-2xl drop-shadow-2xl rounded-md py-4 px-8 w-60 ${className}`}>
         <h2 className='font-semibold text-center'>{title}</h2>
         <div>
             <Image width={100} height={100} alt={title} src={icon} />

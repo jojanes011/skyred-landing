@@ -15,7 +15,7 @@ html * {
 }
 
 .subtitle {
-    @apply text-xl font-semibold text-primary capitalize;
+    @apply text-xl font-semibold text-primary;
 }
 
 .btn-transparent {

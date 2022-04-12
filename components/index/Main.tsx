@@ -16,8 +16,8 @@ const Main = () => {
     };
 
     return (
-        <div className='flex flex-col justify-between bg-main bg-cover bg-bottom text-white space-y-8 px-4 md:px-16 pt-8 py-32 md:py-8'>
-            <div className='flex sm:flex-row md:flex-col lg:flex-row items-center sm:space-x-8 md:space-x-0 lg:space-x-8 md:space-y-4 justify-between sm:pb-0 md:pb-8 lg:pb-0'>
+        <div className='flex flex-col justify-between bg-main bg-cover bg-bottom text-white space-y-8 px-4 md:px-48 pt-8 py-32 md:pt-16 md:pb-32'>
+            <div className='flex sm:flex-row md:flex-col lg:flex-row items-center sm:space-x-8 md:space-x-0 lg:space-x-8 md:space-y-4 justify-between sm:pb-0 md:pb-16 lg:pb-0'>
                 <Link href='/'>
                     <Image
                         className='cursor-pointer'
@@ -57,7 +57,7 @@ const Main = () => {
                 <></>
             )}
             <div className='flex flex-col md:flex-row items-center justify-between py-4 h-96'>
-                <div className='flex flex-col space-y-4 w-full md:w-1/2'>
+                <div className='flex flex-col space-y-4 w-full md:w-1/2 mt-0 md:mt-16'>
                     <h1 className='font-black text-4xl lg:text-5xl'>
                         SOMOS UNA AGENCIA DE MARKETING DIGITAL Y DESARROLLO WEB
                     </h1>

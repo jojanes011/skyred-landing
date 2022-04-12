@@ -6,8 +6,8 @@ const Nosotros = () => {
     return (
         <div>
             <Header title='SOBRE NOSOTROS' titleBreadcrumb='NOSOTROS' />
-            <div className='flex flex-col space-y-8 md:space-y-16 pb-8'>
-                <div className='flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-16 space-y-4 md:space-y-0 pt-16 px-4 md:px-16'>
+            <div className='flex flex-col space-y-8 md:space-y-16 pb-8 px-0 md:px-48'>
+                <div className='flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-16 space-y-4 md:space-y-0 pt-16'>
                     <div className='w-full md:w-1/2'>
                         <video autoPlay loop poster='/img/video.png'>
                             <source src='/video/blue.mp4' />
@@ -46,7 +46,7 @@ const Nosotros = () => {
 export default Nosotros;
 
 const Vision = () => (
-    <div className='grid grid-cols-1 md:grid-cols-2 px-4 md:px-32'>
+    <div className='grid grid-cols-1 md:grid-cols-2'>
         <div className='flex flex-col space-y-2'>
             <h2 className='title'>Visión</h2>
             <p>
@@ -64,7 +64,7 @@ const Vision = () => (
 );
 
 const Mision = () => (
-    <div className='grid grid-cols-1 md:grid-cols-2 px-4 md:px-32'>
+    <div className='grid grid-cols-1 md:grid-cols-2'>
         <div></div>
         <div className='flex flex-col space-y-2'>
             <h2 className='title'>Misión</h2>
@@ -79,18 +79,21 @@ const Mision = () => (
 );
 
 const OurTeam = () => (
-    <div className='px-32 flex flex-col items-center space-y-4'>
+    <div className='px-32 flex flex-col items-center space-y-12 pb-8'>
         <div>
             <h2 className='title text-center'>Nuestro equipo</h2>
         </div>
         <div className='flex flex-col space-y-4 space-x-0 md:flex-row md:space-y-0 md:space-x-8 justify-center'>
             <div className='flex flex-col space-y-2 border shadow-md w-56'>
-                <Image
-                    src='/img/icon-marketing.png'
-                    alt='image'
-                    width={48}
-                    height={140}
-                />
+                <div className='relative w-56 h-60 rounded-t-lg'>
+                    <Image
+                        src='/img/mafe.jpg'
+                        alt='image'
+                        layout='fill'
+                        objectFit='cover'
+                        className='relative rounded-t-lg'
+                    />
+                </div>
                 <div className='p-4 flex flex-col space-y-2 items-stretch'>
                     <p className='font-bold'>Maria Fernanda Bravo</p>
                     <p className='font-light'>Chief Executive Officer (CEO)</p>
@@ -98,12 +101,15 @@ const OurTeam = () => (
                 </div>
             </div>
             <div className='flex flex-col space-y-2 border shadow-md w-56'>
-                <Image
-                    src='/img/icon-marketing.png'
-                    alt='image'
-                    width={48}
-                    height={140}
-                />
+                <div className='relative w-56 h-60 rounded-t-lg'>
+                    <Image
+                        src='/img/santiago.jpg'
+                        alt='image'
+                        layout='fill'
+                        objectFit='cover'
+                        className='relative rounded-t-lg'
+                    />
+                </div>
                 <div className='p-4 flex flex-col space-y-2 items-stretch'>
                     <p className='font-bold'>Santiago Prado</p>
                     <p className='font-light'>Chief Operating Officer (COO)</p>
@@ -111,12 +117,15 @@ const OurTeam = () => (
                 </div>
             </div>
             <div className='flex flex-col space-y-2 border shadow-md w-56'>
-                <Image
-                    src='/img/icon-marketing.png'
-                    alt='image'
-                    width={48}
-                    height={140}
-                />
+                <div className='relative w-56 h-60 rounded-t-lg'>
+                    <Image
+                        src='/img/oviedo.jpg'
+                        alt='image'
+                        layout='fill'
+                        objectFit='cover'
+                        className='relative rounded-t-lg'
+                    />
+                </div>
                 <div className='p-4 flex flex-col space-y-2 items-stretch'>
                     <p className='font-bold'>Joan Sebastian Oviedo</p>
                     <p className='font-light'>Business Digital Developer</p>

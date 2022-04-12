@@ -28,31 +28,32 @@ const Servicios = () => {
         <div>
             <Header title='SERVICIOS' titleBreadcrumb='Servicios' />
             <div className='flex flex-col'>
-                <p className='p-4 md:p-16'>
+                <p className='p-4 md:pb-8 md:pt-16 md:px-48'>
                     En nuestra torre de control trabajamos en pro de la
-                    <strong> innovación y exclusividad</strong> de tu marca para
-                    que despegue hasta un espacio{" "}
-                    <strong> lleno de éxito</strong>. Te ofrecemos una amplia
-                    gama de <strong> servicios profesionales</strong> que te
-                    ayudan a posicionar tu negocio en los medios digitales. A
-                    continuación, te contamos todo lo que tenemos para tu
-                    entorno empresarial.
+                    innovación y exclusividad de tu marca para que despegue
+                    hasta un espacio lleno de éxito. Te ofrecemos una amplia
+                    gama de servicios profesionales que te ayudan a posicionar
+                    tu negocio en los medios digitales. A continuación, te
+                    contamos todo lo que tenemos para tu entorno empresarial.
                 </p>
             </div>
             <ServiceSection
+                className='pb-8'
                 title='Marketing'
                 services={marketingServices}
-                fontColor='#E85A4D'
+                fontColor='secondary'
             />
             <ServiceSection
+                className='pb-8'
                 title='Creación de contenido'
                 services={produccionServices}
-                fontColor='#ED915E'
+                fontColor='primary'
             />
             <ServiceSection
+                className='pb-16'
                 title='Diseño y desarrollo web'
                 services={webServices}
-                fontColor='#E85A4D'
+                fontColor='secondary'
             />
         </div>
     );

@@ -6,14 +6,15 @@ export default function Document() {
         <Html>
             <Head>
                 <link rel='preconnect' href='https://fonts.googleapis.com' />
-                <link
-                    rel='preconnect'
-                    href='https://fonts.gstatic.com'
-                />
+                <link rel='preconnect' href='https://fonts.gstatic.com' />
                 <link
                     href='https://fonts.googleapis.com/css2?family=Montserrat&display=swap'
                     rel='stylesheet'
                 />
+                <link
+                    href='https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'
+                    rel='stylesheet'></link>
+                <title>Sky Red Marketing</title>
             </Head>
             <script
                 src='https://kit.fontawesome.com/a748e3d83e.js'

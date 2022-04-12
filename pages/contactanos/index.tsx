@@ -1,31 +1,40 @@
 import Link from "next/link";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Header from "../../components/Header";
 import emailjs from "@emailjs/browser";
+import { sendMailForm } from "../../utils/functions";
+import { Alert, Collapse } from "@mui/material";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contactanos = () => {
     const form: any = useRef(null);
 
-    const sendEmail = (e: { preventDefault: () => void; }) => {
+    const emailForm = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
-
-        emailjs
-            .sendForm(
-                process.env.EMAIL_JS_SERVICE_ID as string,
-                "template_ki7iixi",
-                form.current,
-                process.env.EMAIL_JS_USER_ID
-            )
-            .then(
-                (result) => {
-                    console.log(result.text);
-                },
-                (error) => {
-                    console.log(error.text);
-                }
-            );
+        const response = await sendMailForm({templateParams: form.current, templateId: "template_fvasnkd"});
+        if (response.status === 200) {
+            toast.success('¡Éxito!', {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
+        } else {
+            toast.error('¡Ha ocurrido un error!', {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
+        }
     };
-    console.log(process.env.EMAIL_JS_USER_ID)
 
     return (
         <div>
@@ -93,7 +102,7 @@ const Contactanos = () => {
                     <h6 className='text-center subtitle'>
                         Envianos un mensaje
                     </h6>
-                    <form ref={form} onSubmit={sendEmail}>
+                    <form ref={form} onSubmit={emailForm}>
                         <div className='flex flex-col space-y-8 w-full items-center'>
                             <div className='w-full'>
                                 <p className='font-semibold'>NOMBRE</p>
@@ -114,6 +123,15 @@ const Contactanos = () => {
                                 />
                             </div>
                             <div className='w-full'>
+                                <p className='font-semibold'>TELÉFONO</p>
+                                <input
+                                    type='number'
+                                    name='user_phone'
+                                    className='w-full rounded-sm shadow px-2 py-1 border border-gray-300'
+                                    placeholder='3156843651'
+                                />
+                            </div>
+                            <div className='w-full'>
                                 <p className='font-semibold'>MENSAJE</p>
                                 <textarea
                                     rows={4}
@@ -125,7 +143,7 @@ const Contactanos = () => {
                             </div>
                             <button
                                 type='button'
-                                onClick={sendEmail}
+                                onClick={emailForm}
                                 value='Send'
                                 className='btn-primary w-full md:w-1/2'>
                                 ENVIAR
@@ -134,6 +152,17 @@ const Contactanos = () => {
                     </form>
                 </div>
             </div>
+            <ToastContainer
+                position='bottom-center'
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </div>
     );
 };

@@ -10,16 +10,17 @@ import {
     IconButton,
     Modal,
 } from "@mui/material";
+import Image from "next/image";
 
 const style = {
     position: "absolute" as "absolute",
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: "80%",
+    width: "60%",
     bgcolor: "background.paper",
     borderRadius: "10px",
-    border: "1px solid gray",
+    border: "4px solid #E85A4D",
     boxShadow: 24,
     px: 2,
     py: 2,
@@ -29,51 +30,71 @@ const dataPortfolio: any = {
     marketing: [
         {
             id: "1",
-            title: "Hola",
+            title: "Elite Grupo Maya",
             coverImage: "",
-            images: ["", "", ""],
+            images: [
+                "/img/portfolio/elite-grupo-maya.jpg",
+                "/img/clients/maya.png",
+            ],
         },
         {
             id: "2",
-            title: "Hola",
+            title: "Encactus de Suculentas",
             coverImage: "",
-            images: ["", "", ""],
+            images: [
+                "/img/portfolio/encactus-de-suculentas.jpg",
+                "/img/clients/encactus.png",
+            ],
         },
         {
             id: "3",
-            title: "Hola",
+            title: "IPAO Boutique",
             coverImage: "",
-            images: ["", "", ""],
+            images: [
+                "/img/portfolio/ipao-boutique.jpg",
+                "/img/clients/ipao.png",
+            ],
         },
         {
             id: "4",
-            title: "Hola",
+            title: "JA CASTILLO",
             coverImage: "",
-            images: ["", "", ""],
+            images: [
+                "/img/portfolio/ja-castillo.jpg",
+                "/img/clients/castillo.png",
+            ],
         },
         {
             id: "5",
-            title: "Hola",
+            title: "Sinay Store",
             coverImage: "",
-            images: ["", "", ""],
+            images: [
+                "/img/portfolio/sinay-store.jpg",
+                "/img/clients/sinay.png",
+            ],
         },
-    ],
-    contentCreation: [
         {
-            id: "1",
-            title: "Hola",
+            id: "6",
+            title: "Soluciones Exactas Precitop",
             coverImage: "",
-            images: ["", "", ""],
+            images: [
+                "/img/portfolio/soluciones-exactas-precitop.jpg",
+                "/img/clients/precitop.png",
+            ],
         },
-    ],
-    web: [
         {
-            id: "1",
-            title: "Hola",
+            id: "7",
+            title: "Uno Arepa",
             coverImage: "",
-            images: ["", "", ""],
+            images: ["/img/portfolio/uno-arepa.jpg", "/img/clients/uno.png"],
         },
     ],
+    contentCreation: [],
+    web: [],
+};
+
+const myLoader = (src: string) => {
+    return `http://localhost:3000${src}`;
 };
 
 export default function ColorTabs() {
@@ -97,23 +118,47 @@ export default function ColorTabs() {
     return (
         <div>
             <Header title='PORTAFOLIO' titleBreadcrumb='Portafolio' />
-            <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby='child-modal-title'
-                aria-describedby='child-modal-description'>
-                <Card variant='outlined' sx={style}>
-                    <CardHeader
-                        action={
-                            <IconButton onClick={handleClose}>
-                                <i className='fas fa-times' />
-                            </IconButton>
-                        }
-                        title={modalData.title}
-                    />
-                    <CardContent></CardContent>
-                </Card>
-            </Modal>
+            {open ? (
+                <Modal
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby='child-modal-title'
+                    aria-describedby='child-modal-description'>
+                    <Card variant='outlined' sx={style}>
+                        <CardHeader
+                            action={
+                                <IconButton onClick={handleClose}>
+                                    <i className='fas fa-times' />
+                                </IconButton>
+                            }
+                            titleTypographyProps={{fontWeight: '600', color: '#E85A4D'}}
+                            title={modalData.title}
+                        />
+                        <CardContent>
+                            <div className='flex flex-col md:flex-row space-y-8 md:space-y-0 space-x-0 md:space-x-8 items-center justify-around'>
+                                <Image
+                                    alt={modalData.images[0]}
+                                    src={modalData.images[0]}
+                                    loader={() => myLoader(modalData.images[0])}
+                                    width={200}
+                                    height={400}
+                                    className='relative'
+                                />
+                                <Image
+                                    alt={modalData.images[1]}
+                                    src={modalData.images[1]}
+                                    loader={() => myLoader(modalData.images[1])}
+                                    width={250}
+                                    height={250}
+                                    className='relative'
+                                />
+                            </div>
+                        </CardContent>
+                    </Card>
+                </Modal>
+            ) : (
+                <></>
+            )}
             <div className='flex flex-col items-center'>
                 <p className='p-4 md:p-16'>
                     En este espacio te mostramos un poco de
@@ -131,7 +176,7 @@ export default function ColorTabs() {
                         aria-label='basic tabs example'>
                         <Tab
                             className='bg-gray-300 text-black hover:text-primary'
-                            label='Marketing'
+                            label='Branding'
                             {...a11yProps(0)}
                         />
                         <Tab
@@ -147,40 +192,84 @@ export default function ColorTabs() {
                     </Tabs>
                 </Box>
                 <TabPanel value={value} index={0}>
-                    {dataPortfolio.marketing.map((data: { id: string; title: string }) => (
-                        <button
-                            type='button'
-                            onClick={() => handleOpen(data.id, "marketing")}
-                            key={data.title}
-                            className='flex flex-col w-full space-y-2 items-center text-center hover:scale-105'>
-                            <div className='bg-gray-300 w-full h-32'></div>
-                            <p>{data.title}</p>
-                        </button>
-                    ))}
+                    {dataPortfolio.marketing.map(
+                        (data: {
+                            id: string;
+                            title: string;
+                            images: Array<any>;
+                        }) => (
+                            <button
+                                type='button'
+                                onClick={() => handleOpen(data.id, "marketing")}
+                                key={data.title}
+                                className='flex flex-col w-full space-y-2 mt-4 md:mt-0 items-center text-center hover:scale-105'>
+                                <div className='relative w-56 h-44'>
+                                    <Image
+                                        alt={data.images[0]}
+                                        src={data.images[0]}
+                                        layout='fill'
+                                        objectFit='cover'
+                                        className='relative'
+                                    />
+                                </div>
+                                <p>{data.title}</p>
+                            </button>
+                        )
+                    )}
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    {dataPortfolio.contentCreation.map((data: { id: string; title: string }) => (
-                        <button
-                            type='button'
-                            onClick={() => handleOpen(data.id, "contentCreation")}
-                            key={data.title}
-                            className='flex flex-col w-full space-y-2 items-center text-center hover:scale-105'>
-                            <div className='bg-gray-300 w-full h-32'></div>
-                            <p>{data.title}</p>
-                        </button>
-                    ))}
+                    {dataPortfolio.contentCreation.map(
+                        (data: {
+                            id: string;
+                            title: string;
+                            images: Array<any>;
+                        }) => (
+                            <button
+                                type='button'
+                                onClick={() =>
+                                    handleOpen(data.id, "contentCreation")
+                                }
+                                key={data.title}
+                                className='flex flex-col w-full space-y-2 items-center text-center hover:scale-105'>
+                                <div className='relative w-56 h-44'>
+                                    <Image
+                                        alt={data.images[0]}
+                                        src={data.images[0]}
+                                        layout='fill'
+                                        objectFit='cover'
+                                        className='relative'
+                                    />
+                                </div>
+                                <p>{data.title}</p>
+                            </button>
+                        )
+                    )}
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                    {dataPortfolio.web.map((data: { id: string; title: string }) => (
-                        <button
-                            type='button'
-                            onClick={() => handleOpen(data.id, "web")}
-                            key={data.title}
-                            className='flex flex-col w-full space-y-2 items-center text-center hover:scale-105'>
-                            <div className='bg-gray-300 w-full h-32'></div>
-                            <p>{data.title}</p>
-                        </button>
-                    ))}
+                    {dataPortfolio.web.map(
+                        (data: {
+                            id: string;
+                            title: string;
+                            images: Array<any>;
+                        }) => (
+                            <button
+                                type='button'
+                                onClick={() => handleOpen(data.id, "web")}
+                                key={data.title}
+                                className='flex flex-col w-full space-y-2 items-center text-center hover:scale-105'>
+                                <div className='relative w-56 h-44'>
+                                    <Image
+                                        alt={data.images[0]}
+                                        src={data.images[0]}
+                                        layout='fill'
+                                        objectFit='cover'
+                                        className='relative'
+                                    />
+                                </div>
+                                <p>{data.title}</p>
+                            </button>
+                        )
+                    )}
                 </TabPanel>
             </Box>
         </div>
