@@ -94,7 +94,7 @@ const dataPortfolio: any = {
 };
 
 const myLoader = (src: string) => {
-    return `http://localhost:3000${src}`;
+    return `https://www.skyredmarketing.com${src}`;
 };
 
 export default function ColorTabs() {
