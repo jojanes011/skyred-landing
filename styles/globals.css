@@ -46,11 +46,11 @@ html * {
 
 /* Handle */
 .scroll::-webkit-scrollbar-thumb {
-    background: #E85A4D;
+    background: #81878b;
     width: 10px;
 }
 
 /* Handle on hover */
 .scroll::-webkit-scrollbar-thumb:hover {
-    background: #E85A4D;
+    background: #81878b;
 }

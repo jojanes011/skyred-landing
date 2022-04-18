@@ -3,7 +3,7 @@ import React from "react";
 
 const Partners = () => {
     return (
-        <div className='bg-[#F2F2F2] flex flex-col items-center space-y-4 py-8 px-4'>
+        <div className='bg-[#F2F2F2] flex flex-col items-center space-y-8 py-8 px-4'>
             <h2 className='font-semibold text-2xl'>Nuestros clientes</h2>
             <div className={"scroll flex flex-row justify-center space-x-2 md:space-x-16 overflow-x-auto"}>
                 <div className='flex-shrink-0'>
