@@ -3,24 +3,25 @@ import Header from "../../components/Header";
 import ServiceSection from "../../components/servicios/ServiceSection";
 
 const marketingServices = [
-    { name: "Marketing", image: "/img/icon-marketing.png" },
-    { name: "Marketing", image: "/img/icon-marketing.png" },
-    { name: "Marketing", image: "/img/icon-marketing.png" },
-    { name: "Marketing", image: "/img/icon-marketing.png" },
+    { name: "Campañas Publicitarias", image: "/img/icons/marketing/campanas-publicitarias.png" },
+    { name: "Email Marketing", image: "/img/icons/marketing/email-marketing.png" },
+    { name: "Marketing en Medios Digitales", image: "/img/icons/marketing/medios-digitales.png" },
+    { name: "Reputación Online", image: "/img/icons/marketing/reputacion-online.png" },
+    { name: "Gestión y Administración de RRSS", image: "/img/icons/marketing/rrss.png" },
 ];
 
 const produccionServices = [
-    { name: "Marketing", image: "/img/icon-video.png" },
-    { name: "Marketing", image: "/img/icon-video.png" },
-    { name: "Marketing", image: "/img/icon-video.png" },
-    { name: "Marketing", image: "/img/icon-video.png" },
+    { name: "Branding", image: "/img/icons/creacion-contenido/branding.png" },
+    { name: "Copywrite", image: "/img/icons/creacion-contenido/copywrite.png" },
+    { name: "Diseño Gráfico", image: "/img/icons/creacion-contenido/diseno-grafico.png" },
+    { name: "Fotografía", image: "/img/icons/creacion-contenido/fotografia.png" },
+    { name: "Videografía", image: "/img/icons/creacion-contenido/videografia.png" },
 ];
 
 const webServices = [
-    { name: "Marketing", image: "/img/icon-web.png" },
-    { name: "Marketing", image: "/img/icon-web.png" },
-    { name: "Marketing", image: "/img/icon-web.png" },
-    { name: "Marketing", image: "/img/icon-web.png" },
+    { name: "Ecommerce", image: "/img/icons/web/ecommerce.png" },
+    { name: "Landing Page", image: "/img/icons/web/landing.png" },
+    { name: "Página Estándar", image: "/img/icons/web/estandar.png" },
 ];
 
 const Servicios = () => {

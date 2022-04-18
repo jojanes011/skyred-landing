@@ -25,7 +25,7 @@ const ServiceSection = ({
                         <div className="p-4">
                             <Image src={image} width={90} height={80} alt={name}  />
                         </div>
-                        <p className="font-semibold">{name}</p>
+                        <p className="font-semibold break-words w-full md:w-48">{name}</p>
                     </div>
                 ))}
             </div>

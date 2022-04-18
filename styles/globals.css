@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .btn-primary {
@@ -32,4 +32,25 @@ html * {
 
 .Mui-selected {
     @apply font-semibold;
+}
+
+/* width */
+.scroll::-webkit-scrollbar {
+    height: 4px;
+}
+
+/* Track */
+.scroll::-webkit-scrollbar-track {
+    background: #f2f2f2;
+}
+
+/* Handle */
+.scroll::-webkit-scrollbar-thumb {
+    background: #E85A4D;
+    width: 10px;
+}
+
+/* Handle on hover */
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: #E85A4D;
 }
